@@ -1,0 +1,26 @@
+---
+layout: default
+title: "Mes réalisations"
+title_en: "My work"
+description: "Mes projets et créations."
+nav: realisations
+body_class: page-secondary
+---
+
+    <main class="main-content" id="main">
+        <header class="page-hero">
+            <h1 data-en="My work">Mes réalisations</h1>
+            <p data-en="Everything I am building, one project at a time: direct access to my real work.">Tout ce que je construis, un projet à la fois : l'accès direct à mes vraies réalisations.</p>
+        </header>
+        
+        <div class="prose realisations">
+{% for g in site.data.realisations %}
+{% assign items = site.posts | where: "realisation", g.id %}
+            <section class="real-group" aria-labelledby="h-{{ g.id }}">
+                <h2 id="{{ g.id }}"><span id="h-{{ g.id }}" data-en="{{ g.en | escape }}">{{ g.fr | escape }}</span></h2>
+                <p data-en="{{ g.desc.en | escape }}">{{ g.desc.fr | escape }}</p>
+{% include post-list.html posts=items %}
+            </section>
+{% endfor %}
+        </div>
+    </main>

@@ -1,0 +1,8 @@
+# « En ce moment, j'explore… » sur la page d'accueil.
+# Change le titre, le niveau (sur max) et le nombre de jours de pratique.
+title:
+  fr: "Le développement web & le design UX"
+  en: "Web development & UX design"
+level: 2
+max: 10
+streak: 8

@@ -1,0 +1,55 @@
+
+    <!-- ══ FOOTER ══ -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+                    <a class="footer-logo" href="{{ '/' | relative_url }}"><span class="orb" aria-hidden="true">🪐</span><span class="name">Dame Ornibest</span></a>
+                    <p class="signature" data-en="“I stay true to who I am becoming.”">« Je reste fidèle à qui je deviens. »</p>
+                    <p class="loading">...loading</p>
+                    <div class="social"><a href="{{ site.social.youtube | default: '#' }}" aria-label="YouTube" title="YouTube" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9.2v5.6l5-2.8z" fill="currentColor"/></svg></a><a href="{{ site.social.tiktok | default: '#' }}" aria-label="TikTok" title="TikTok" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3v11.2a3.8 3.8 0 1 1-3.8-3.8"/><path d="M14 3c.4 2.6 2.2 4.4 5 4.6"/></svg></a><a href="{{ site.social.pinterest | default: '#' }}" aria-label="Pinterest" title="Pinterest" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M11 17.5l1.6-6.6"/><path d="M9.2 12.6c-.8-2.4.7-4.8 3.3-4.8 2 0 3.3 1.3 3.3 3 0 2-1.2 3.6-2.8 3.6-.8 0-1.4-.5-1.6-1.2"/></svg></a><a href="{{ site.social.instagram | default: '#' }}" aria-label="Instagram" title="Instagram" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor"/></svg></a></div>
+                </div>
+
+                <nav class="footer-col" aria-label="Rubriques" data-en-aria-label="Sections">
+                    <h2 data-en="Explore">Explorer</h2>
+                    <ul><li><a href="{{ '/a-propos.html' | relative_url }}"><span data-en="About">À propos</span></a></li><li><a href="{{ '/#ornivers' | relative_url }}"><span data-en="My Ornivers">Mon Ornivers</span></a></li><li><a href="{{ '/realisations.html' | relative_url }}"><span data-en="My work">Mes réalisations</span></a></li><li><a href="{{ '/newsletter.html' | relative_url }}"><span data-en="Newsletter">Newsletter</span></a></li></ul>
+                </nav>
+
+                <nav class="footer-col" aria-label="Informations" data-en-aria-label="Information">
+                    <h2 data-en="Info">Infos</h2>
+                    <ul>
+                        <li><a href="{{ '/a-propos.html' | relative_url }}"><span data-en="About">À propos</span></a></li>
+                        <li><a href="{{ '/contact.html' | relative_url }}"><span data-en="Contact">Contact</span></a></li>
+                        <li><a href="{{ '/manifeste.html' | relative_url }}"><span data-en="Manifesto">Manifeste</span></a></li>
+                    </ul>
+                </nav>
+
+                <div class="footer-col">
+                    <h2 data-en="Newsletter">Newsletter</h2>
+                    <div>
+                        <form class="news-form" data-newsletter novalidate{% if site.newsletter_action and site.newsletter_action != "" %} action="{{ site.newsletter_action }}" method="post"{% endif %}>
+                            <label class="sr-only" for="email-f" data-en="Your email address">Ton adresse e-mail</label>
+                            <input id="email-f" type="email" name="email" autocomplete="email" placeholder="ton@email.com" data-en-placeholder="you@email.com">
+                            <button class="btn btn-primary" type="submit"><span data-en="Subscribe">Je m'inscris</span></button>
+                        </form>
+                        <p class="form-msg" aria-live="polite"></p>
+                        <p class="form-hint" data-html data-en="Your email is only used to send you my news. <a href='{{ "/confidentialite.html" | relative_url }}'>Privacy policy</a>.">Ton e-mail sert uniquement à t'envoyer mes nouvelles. <a href="{{ '/confidentialite.html' | relative_url }}">Politique de confidentialité</a>.</p>
+                    </div>
+                    <div class="footer-lang">
+                        <span data-en="Language">Langue</span>
+                        <div class="lang-switch " role="group" aria-label="Langue" data-en-aria-label="Language"><button type="button" data-lang-set="fr" aria-pressed="true">FR</button><button type="button" data-lang-set="en" aria-pressed="false">EN</button></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p data-en="© 2026 Dame Ornibest. All rights reserved.">© 2026 Dame Ornibest. Tous droits réservés.</p>
+                <ul>
+                    <li><a href="{{ '/mentions-legales.html' | relative_url }}"><span data-en="Legal notice">Mentions légales</span></a></li>
+                    <li><a href="{{ '/confidentialite.html' | relative_url }}"><span data-en="Privacy policy">Politique de confidentialité</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>

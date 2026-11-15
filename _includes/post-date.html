@@ -1,0 +1,1 @@
+{% assign d = include.date %}{% assign m = d | date: "%-m" %}{% assign day = d | date: "%-d" %}<time datetime="{{ d | date: '%Y-%m-%d' }}" data-en="{{ site.data.months[m].en }} {{ day }}, {{ d | date: '%Y' }}">{{ day }}{% if day == "1" %}er{% endif %} {{ site.data.months[m].fr }} {{ d | date: '%Y' }}</time>

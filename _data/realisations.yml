@@ -1,0 +1,26 @@
+# Les quatre blocs de la page « Mes réalisations ».
+# Un article apparaît dans un bloc quand son en-tête contient : realisation: web (ou creations, recettes, contenus)
+- id: web
+  fr: "Projets web"
+  en: "Web projects"
+  desc:
+    fr: "Sites, pages et expériences que j'ai construits."
+    en: "Sites, pages and experiments I have built."
+- id: creations
+  fr: "Créations & art"
+  en: "Creations & art"
+  desc:
+    fr: "Affiches, identités visuelles, dessins : ce que j'ai créé."
+    en: "Posters, visual identities, drawings: what I have created."
+- id: recettes
+  fr: "Recettes"
+  en: "Recipes"
+  desc:
+    fr: "Mes recettes réussies, testées et racontées."
+    en: "My successful recipes, tested and told."
+- id: contenus
+  fr: "Articles & vidéos"
+  en: "Articles & videos"
+  desc:
+    fr: "Mes textes et mes vidéos les plus importants."
+    en: "My most important texts and videos."

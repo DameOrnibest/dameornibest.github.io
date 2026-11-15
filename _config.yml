@@ -1,0 +1,56 @@
+# ═══════════════════════════════════════════════════════════
+#  DAME ORNIBEST — réglages du site (Jekyll / GitHub Pages)
+#  Après avoir changé ce fichier, relance `bundle exec jekyll serve`
+#  (sur GitHub Pages, c'est automatique à chaque envoi).
+# ═══════════════════════════════════════════════════════════
+title: Dame Ornibest
+description: "Dame Ornibest, multipotentielle en devenir : parcours, apprentissages, créations et rituels."
+lang: fr
+timezone: Africa/Douala
+
+# ── Adresse du site ──
+# Site « utilisateur » (dame-ornibest.github.io, dépôt du même nom) : laisse url et baseurl vides.
+# Site « projet » (dame-ornibest.github.io/mon-depot) : mets baseurl: "/mon-depot"
+url: ""
+baseurl: ""
+
+# Les publications datées d'un jour futur restent cachées jusqu'à ce jour-là.
+future: false
+permalink: /publications/:title/
+markdown: kramdown
+
+# ── Réglages du site ──
+# Affiche le badge « Exemple » sur les publications qui contiennent « exemple: true ».
+# Quand tu auras remplacé les exemples par tes vraies publications, mets false.
+show_example_badge: true
+
+# Ton adresse e-mail de contact (affichée sur la page Contact). Laisse vide pour ne rien afficher.
+contact_email: ""
+
+# Adresse d'envoi du formulaire newsletter (Buttondown, Brevo, MailerLite, Formspree…). Laisse vide au départ.
+newsletter_action: ""
+
+# Adresses de tes profils : colle l'adresse complète (https://…). Vide = l'icône reste, sans lien.
+social:
+  youtube: ""
+  tiktok: ""
+  pinterest: ""
+  instagram: ""
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      body_class: page-post
+      exemple: false
+
+exclude:
+  - README.md
+  - GUIDE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - tools

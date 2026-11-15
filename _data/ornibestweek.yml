@@ -1,0 +1,28 @@
+# #OrnibestWeek : bilan affiché sur la page d'accueil.
+# Chaque dimanche : change la date, la note et les pourcentages (0 à 100).
+date: 2026-11-15
+note:
+  fr: "Dernier bilan : dimanche 15 novembre 2026"
+  en: "Latest review: Sunday 15 November 2026"
+zones:
+  - fr: "Pro / académique"
+    en: "Career / academic"
+    value: 60
+  - fr: "Corps / santé"
+    en: "Body / health"
+    value: 70
+  - fr: "Mental / bien-être"
+    en: "Mind / well-being"
+    value: 65
+  - fr: "Créativité"
+    en: "Creativity"
+    value: 80
+  - fr: "Finances / projets"
+    en: "Finances / projects"
+    value: 40
+  - fr: "Famille / relations"
+    en: "Family / relationships"
+    value: 55
+  - fr: "Gratitude / foi"
+    en: "Gratitude / faith"
+    value: 75

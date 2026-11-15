@@ -1,0 +1,66 @@
+---
+layout: default
+---
+{% assign p = site.data.planets | where: "id", page.planet | first %}
+{% assign prev_p = site.data.planets | where: "id", p.prev | first %}
+{% assign next_p = site.data.planets | where: "id", p.next | first %}
+{% assign planet_posts = site.posts | where: "planet", p.id %}
+    <nav class="crumbs" aria-label="Fil d'Ariane" data-en-aria-label="Breadcrumb">
+        <a href="{{ '/#ornivers' | relative_url }}"><span data-en="My Ornivers">Mon Ornivers</span></a> <span aria-hidden="true">›</span> <span data-en="{{ p.name.en | escape }}">{{ p.name.fr | escape }}</span>
+    </nav>
+
+    <header class="planet-hero">
+        <div class="hero-orb" aria-hidden="true">{{ p.emoji }}</div>
+        <h1 data-en="{{ p.name.en | escape }}">{{ p.name.fr | escape }}</h1>
+        <p class="p-tagline" data-en="{{ p.tagline.en | escape }}">{{ p.tagline.fr | escape }}</p>
+        <p class="p-intro" data-en="{{ p.intro.en | escape }}">{{ p.intro.fr | escape }}</p>
+    </header>
+
+    <nav class="subnav" aria-label="Rubriques de cette planète" data-en-aria-label="Sections of this planet">
+        <button class="subnav-toggle" type="button" aria-expanded="false"><span data-en="Sections of this planet">Rubriques de cette planète</span><span class="chev"></span></button>
+        <ul class="subnav-bar">
+{% for r in p.rubriques %}
+            <li class="nav-item{% if r.subs.size > 0 %} has-sub{% endif %}"><div class="nav-row"><a class="nav-link" href="#{{ r.id }}"><span data-en="{{ r.name.en | escape }}">{{ r.name.fr | escape }}</span></a>{% if r.subs.size > 0 %}<button class="sub-toggle" type="button" aria-expanded="false" aria-label="Ouvrir le sous-menu : {{ r.name.fr | escape }}" data-en-aria-label="Open submenu: {{ r.name.en | escape }}"><span class="chev"></span></button>{% endif %}</div>{% if r.subs.size > 0 %}<ul class="submenu">{% for s in r.subs %}<li><a href="#{{ s.id }}"><span data-en="{{ s.en | escape }}">{{ s.fr | escape }}</span></a></li>{% endfor %}</ul>{% endif %}</li>
+{% endfor %}
+        </ul>
+    </nav>
+
+    <main class="planet-main" id="main">
+{% for r in p.rubriques %}
+{% assign r_posts = planet_posts | where: "rubrique", r.id %}
+        <section class="rubrique" id="{{ r.id }}" aria-labelledby="h-{{ r.id }}">
+            <h2 id="h-{{ r.id }}" data-en="{{ r.name.en | escape }}">{{ r.name.fr | escape }}</h2>
+            <p data-en="{{ r.desc.en | escape }}">{{ r.desc.fr | escape }}</p>
+{% if r.subs.size > 0 %}
+            <div class="sub-grid">
+{% for s in r.subs %}
+{% assign s_posts = r_posts | where: "sous_rubrique", s.fr %}
+                <article class="sub-card" id="{{ s.id }}">
+                    <h3 data-en="{{ s.en | escape }}">{{ s.fr | escape }}</h3>
+{% include post-list.html posts=s_posts %}
+                </article>
+{% endfor %}
+            </div>
+{% else %}
+{% include post-list.html posts=r_posts %}
+{% endif %}
+        </section>
+{% endfor %}
+
+        <aside class="notice">
+            <p data-en="One post a day, linked to one of my six planets. Subscribe to the newsletter so you don't miss any.">Une publication par jour, liée à l'une de mes six planètes. Inscris-toi à la newsletter pour ne rien manquer.</p>
+            <a class="btn btn-primary" href="{{ '/newsletter.html' | relative_url }}"><span data-en="Join the newsletter">Rejoindre la newsletter</span></a>
+        </aside>
+
+        <nav class="planet-pager" aria-label="Autres planètes" data-en-aria-label="Other planets">
+            <a class="pager-card {{ prev_p.theme }}" href="{{ prev_p.file | prepend: '/' | relative_url }}">
+                <span class="orb" aria-hidden="true">{{ prev_p.emoji }}</span>
+                <span><small data-en="← Previous planet">← Planète précédente</small><strong data-en="{{ prev_p.name.en | escape }}">{{ prev_p.name.fr | escape }}</strong></span>
+            </a>
+            <a class="pager-card back" href="{{ '/#ornivers' | relative_url }}"><span data-en="Back to the Ornivers">Retour à l'Ornivers</span></a>
+            <a class="pager-card {{ next_p.theme }}" href="{{ next_p.file | prepend: '/' | relative_url }}">
+                <span class="orb" aria-hidden="true">{{ next_p.emoji }}</span>
+                <span><small data-en="Next planet →">Planète suivante →</small><strong data-en="{{ next_p.name.en | escape }}">{{ next_p.name.fr | escape }}</strong></span>
+            </a>
+        </nav>
+    </main>

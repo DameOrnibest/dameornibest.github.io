@@ -1,0 +1,37 @@
+# Noms des mois (clés entre guillemets exprès)
+"1":
+  fr: janvier
+  en: January
+"2":
+  fr: février
+  en: February
+"3":
+  fr: mars
+  en: March
+"4":
+  fr: avril
+  en: April
+"5":
+  fr: mai
+  en: May
+"6":
+  fr: juin
+  en: June
+"7":
+  fr: juillet
+  en: July
+"8":
+  fr: août
+  en: August
+"9":
+  fr: septembre
+  en: September
+"10":
+  fr: octobre
+  en: October
+"11":
+  fr: novembre
+  en: November
+"12":
+  fr: décembre
+  en: December

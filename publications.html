@@ -1,0 +1,26 @@
+---
+layout: default
+title: "Toutes les publications"
+title_en: "All posts"
+description: "Toutes mes publications, planète par planète."
+nav: ornivers
+body_class: page-secondary
+permalink: /publications/
+---
+
+    <main class="main-content" id="main">
+        <header class="page-hero">
+            <h1 data-en="All posts">Toutes les publications</h1>
+            <p data-en="One post a day, sorted by planet, from newest to oldest.">Une publication par jour, classée par planète, de la plus récente à la plus ancienne.</p>
+        </header>
+        
+        <div class="prose realisations">
+{% for pl in site.data.planets %}
+{% assign items = site.posts | where: "planet", pl.id %}
+            <section class="real-group">
+                <h2 id="{{ pl.id }}"><span data-en="{{ pl.name.en | escape }}">{{ pl.emoji }} {{ pl.name.fr | escape }}</span></h2>
+{% include post-list.html posts=items %}
+            </section>
+{% endfor %}
+        </div>
+    </main>

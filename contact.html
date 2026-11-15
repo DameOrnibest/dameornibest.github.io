@@ -1,0 +1,35 @@
+---
+layout: default
+title: "Contact"
+title_en: "Contact"
+description: "Me contacter."
+nav: about
+body_class: page-secondary
+---
+
+    <main class="main-content" id="main">
+        <header class="page-hero">
+            <h1 data-en="Contact me">Me contacter</h1>
+            <p data-en="A message, an idea, a collaboration? Here is how to reach me.">Un message, une idée, une collaboration ? Voici comment m'écrire.</p>
+        </header>
+        
+        <section class="card stub-card contact-card">
+            {% if site.contact_email and site.contact_email != "" %}
+            <p><span data-en="Write to me directly by email:">Écris-moi directement par e-mail :</span></p>
+            <p><a class="btn btn-primary" href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a></p>
+            {% endif %}
+            <p><span data-en="The easiest way: send me a private message on social media.">Le plus simple : envoie-moi un message privé sur mes réseaux.</span></p>
+            <div class="social"><a href="{{ site.social.youtube | default: '#' }}" aria-label="YouTube" title="YouTube" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9.2v5.6l5-2.8z" fill="currentColor"/></svg></a><a href="{{ site.social.tiktok | default: '#' }}" aria-label="TikTok" title="TikTok" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3v11.2a3.8 3.8 0 1 1-3.8-3.8"/><path d="M14 3c.4 2.6 2.2 4.4 5 4.6"/></svg></a><a href="{{ site.social.pinterest | default: '#' }}" aria-label="Pinterest" title="Pinterest" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M11 17.5l1.6-6.6"/><path d="M9.2 12.6c-.8-2.4.7-4.8 3.3-4.8 2 0 3.3 1.3 3.3 3 0 2-1.2 3.6-2.8 3.6-.8 0-1.4-.5-1.6-1.2"/></svg></a><a href="{{ site.social.instagram | default: '#' }}" aria-label="Instagram" title="Instagram" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor"/></svg></a></div>
+        </section>
+        <div class="prose">
+            <h2><span data-en="Why write to me?">Pourquoi m'écrire ?</span></h2>
+            <ul class="plain-list">
+                <li><span data-en="To recommend a book, a practice or a resource that helped you: I am all ears.">Pour me conseiller un livre, une pratique ou une ressource qui t'a aidée : je suis preneuse.</span></li>
+                <li><span data-en="To tell me what you tried after reading one of my posts.">Pour me dire ce que tu as testé après avoir lu une de mes publications.</span></li>
+                <li><span data-en="To suggest a collaboration, a project or an exchange.">Pour proposer une collaboration, un projet ou un échange.</span></li>
+                <li><span data-en="To share your own story of reinvention.">Pour partager ta propre histoire de réinvention.</span></li>
+            </ul>
+            <p class="sign"><span data-en="I read everything carefully and reply at my own pace, with a smile.">Je lis tout avec attention et je réponds à mon rythme, avec le sourire.</span></p>
+            <p><a class="btn btn-ghost" href="{{ '/newsletter.html' | relative_url }}"><span data-en="Join the newsletter">Rejoindre la newsletter</span></a></p>
+        </div>
+    </main>

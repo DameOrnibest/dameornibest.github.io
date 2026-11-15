@@ -1,0 +1,37 @@
+---
+layout: default
+title: "Newsletter"
+title_en: "Newsletter"
+description: "Recevoir mes nouvelles."
+nav: newsletter
+body_class: page-secondary
+---
+
+    <main class="main-content" id="main">
+        <header class="page-hero">
+            <h1 data-en="Newsletter">Newsletter</h1>
+            <p data-en="Move forward with me, at your own pace.">Avance avec moi, à ton rythme.</p>
+        </header>
+        
+        <section class="card stub-card">
+            <p data-en="Every week: my learning, my creations and my #OrnibestWeek, straight to your inbox.">Chaque semaine : mes apprentissages, mes créations et mon #OrnibestWeek, directement dans ta boîte mail.</p>
+            <div style="margin-top: 1.25rem"><div>
+                        <form class="news-form" data-newsletter novalidate{% if site.newsletter_action and site.newsletter_action != "" %} action="{{ site.newsletter_action }}" method="post"{% endif %}>
+                            <label class="sr-only" for="email-n" data-en="Your email address">Ton adresse e-mail</label>
+                            <input id="email-n" type="email" name="email" autocomplete="email" placeholder="ton@email.com" data-en-placeholder="you@email.com">
+                            <button class="btn btn-primary" type="submit"><span data-en="Subscribe">Je m'inscris</span></button>
+                        </form>
+                        <p class="form-msg" aria-live="polite"></p>
+                        <p class="form-hint" data-html data-en="Your email is only used to send you my news. <a href='{{ "/confidentialite.html" | relative_url }}'>Privacy policy</a>.">Ton e-mail sert uniquement à t'envoyer mes nouvelles. <a href="{{ '/confidentialite.html' | relative_url }}">Politique de confidentialité</a>.</p>
+                    </div></div>
+        </section>
+        <div class="prose">
+            <h2><span data-en="What you get">Ce que tu reçois</span></h2>
+            <ul class="plain-list">
+                <li><span data-en="The standout post of the week, with the link to read it.">La publication marquante de la semaine, avec le lien pour la lire.</span></li>
+                <li><span data-en="My Sunday #OrnibestWeek review.">Mon bilan #OrnibestWeek du dimanche.</span></li>
+                <li><span data-en="My templates and resources to reuse.">Mes modèles et ressources à réutiliser.</span></li>
+            </ul>
+            <p class="sign"><span data-en="No spam. You can unsubscribe at any time.">Pas de spam. Tu peux te désinscrire à tout moment.</span></p>
+        </div>
+    </main>

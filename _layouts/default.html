@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% assign bp = site.data.planets | where: "id", page.planet | first %}
+    {% if page.home %}<title data-en="{{ page.title_en | default: page.title | escape }}">{{ page.title | escape }}</title>
+    {% else %}<title data-en="{{ page.title_en | default: page.title | escape }} - Dame Ornibest">{{ page.title | escape }} - Dame Ornibest</title>
+    {% endif %}<meta name="description" content="{{ page.description | default: page.resume | default: site.description | escape }}">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%AA%90%3C/text%3E%3C/svg%3E">
+    <script>(function(){try{var t=localStorage.getItem('ornibest-theme');var l=localStorage.getItem('ornibest-lang');if(t==='light'){document.documentElement.setAttribute('data-theme','light');}if(l==='en'){document.documentElement.setAttribute('lang','en');}}catch(e){}})();</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+
+<body class="{{ page.body_class }}{% if bp %} {{ bp.theme }}{% endif %}">
+{% include header.html %}
+{{ content }}
+{% include footer.html %}
+
+    <script src="{{ '/assets/js/search-index.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+</body>
+
+</html>

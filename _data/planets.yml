@@ -1,0 +1,434 @@
+# Les six planètes, leurs rubriques et sous-rubriques.
+# Les pages des planètes et la recherche se construisent à partir de ce fichier.
+- id: formation
+  file: formation.html
+  emoji: "📚"
+  theme: theme-formation
+  prev: journal
+  next: art
+  name:
+    fr: "Formation & Savoir"
+    en: "Learning & Knowledge"
+  tip:
+    fr: "Apprendre chaque jour"
+    en: "Learning every day"
+  tagline:
+    fr: "Apprendre avec amour, un devoir à la fois."
+    en: "Learning with love, one assignment at a time."
+  intro:
+    fr: "Mon socle : c'est ici que je documente mes cours, mes exercices et ce que je comprends au fil des jours, du code aux langues."
+    en: "My foundation: here I document my courses, exercises and what I understand day by day, from code to languages."
+  rubriques:
+    - id: web
+      name:
+        fr: "Développement web"
+        en: "Web development"
+      desc:
+        fr: "HTML, CSS, JavaScript et design UX : mes cours, mes exercices, mes projets."
+        en: "HTML, CSS, JavaScript and UX design: my courses, exercises and projects."
+      subs:
+        - id: web-html-css
+          fr: "HTML & CSS"
+          en: "HTML & CSS"
+        - id: web-javascript
+          fr: "JavaScript"
+          en: "JavaScript"
+        - id: web-design-ux-ui
+          fr: "Design UX/UI"
+          en: "UX/UI design"
+        - id: web-mes-projets
+          fr: "Mes projets"
+          en: "My projects"
+    - id: cyber-ia
+      name:
+        fr: "Cybersécurité & IA"
+        en: "Cybersecurity & AI"
+      desc:
+        fr: "Comprendre les bases pour avancer en sécurité et avec curiosité."
+        en: "Understanding the basics to move forward safely and with curiosity."
+      subs:
+        - id: cyber-ia-cybersecurite
+          fr: "Cybersécurité"
+          en: "Cybersecurity"
+        - id: cyber-ia-intelligence-artificielle
+          fr: "Intelligence artificielle"
+          en: "Artificial intelligence"
+    - id: langues
+      name:
+        fr: "Langues"
+        en: "Languages"
+      desc:
+        fr: "L'anglais d'abord : un mot du jour, ma progression, des anecdotes."
+        en: "English first: a word of the day, my progress, anecdotes."
+      subs:
+        - id: langues-anglais
+          fr: "Anglais"
+          en: "English"
+        - id: langues-autres-langues
+          fr: "Autres langues"
+          en: "Other languages"
+    - id: lectures
+      name:
+        fr: "Lectures"
+        en: "Reading"
+      desc:
+        fr: "Une citation du livre du moment et ce qu'elle m'apprend."
+        en: "A quote from the book I am reading and what it teaches me."
+      subs: []
+- id: art
+  file: art.html
+  emoji: "✨"
+  theme: theme-art
+  prev: formation
+  next: selfcare
+  name:
+    fr: "Art & Création"
+    en: "Art & Creation"
+  tip:
+    fr: "Créer sans me retenir"
+    en: "Creating freely"
+  tagline:
+    fr: "Créer parce que quelque chose en moi doit s'exprimer."
+    en: "Creating because something in me needs to be expressed."
+  intro:
+    fr: "Dessin, création numérique, art sensoriel et photo : le processus compte autant que le résultat, même maladroit."
+    en: "Drawing, digital creation, sensory art and photography: the process matters as much as the result, even when clumsy."
+  rubriques:
+    - id: dessin
+      name:
+        fr: "Dessin"
+        en: "Drawing"
+      desc:
+        fr: "Mes croquis, mes essais et mes progrès, mois après mois."
+        en: "My sketches, attempts and progress, month after month."
+      subs:
+        - id: dessin-croquis-du-jour
+          fr: "Croquis du jour"
+          en: "Sketch of the day"
+        - id: dessin-mon-processus
+          fr: "Mon processus"
+          en: "My process"
+    - id: numerique
+      name:
+        fr: "Création numérique"
+        en: "Digital creation"
+      desc:
+        fr: "Design graphique, visuels et identité Dame Ornibest."
+        en: "Graphic design, visuals and the Dame Ornibest identity."
+      subs:
+        - id: numerique-design-graphique
+          fr: "Design graphique"
+          en: "Graphic design"
+        - id: numerique-identite-visuelle
+          fr: "Identité visuelle"
+          en: "Visual identity"
+    - id: sensoriel
+      name:
+        fr: "Art sensoriel"
+        en: "Sensory art"
+      desc:
+        fr: "Créer avec les sens : textures, parfums, ambiances."
+        en: "Creating with the senses: textures, scents, moods."
+      subs: []
+    - id: photo
+      name:
+        fr: "Photographie"
+        en: "Photography"
+      desc:
+        fr: "Lumières, détails et regards du quotidien."
+        en: "Light, details and everyday glimpses."
+      subs: []
+- id: selfcare
+  file: bien-etre.html
+  emoji: "🌿"
+  theme: theme-selfcare
+  prev: art
+  next: musique
+  name:
+    fr: "Self-care & Bien-être"
+    en: "Self-care & Well-being"
+  tip:
+    fr: "Prendre soin de moi"
+    en: "Taking care of me"
+  tagline:
+    fr: "Prendre soin de moi parce que je m'aime, pas pour plaire."
+    en: "Caring for myself because I love myself, not to please."
+  intro:
+    fr: "Soins maison, mouvement, rituels et style : mon quotidien pour habiter pleinement la femme que je deviens."
+    en: "Homemade care, movement, rituals and style: my daily practice to fully inhabit the woman I am becoming."
+  rubriques:
+    - id: soins
+      name:
+        fr: "Soins du corps & visage"
+        en: "Body & face care"
+      desc:
+        fr: "Routines du matin et du soir, recettes maison, massages."
+        en: "Morning and evening routines, homemade recipes, massages."
+      subs:
+        - id: soins-routine-du-matin
+          fr: "Routine du matin"
+          en: "Morning routine"
+        - id: soins-routine-du-soir
+          fr: "Routine du soir"
+          en: "Evening routine"
+        - id: soins-recettes-maison
+          fr: "Recettes maison"
+          en: "Homemade recipes"
+    - id: cheveux
+      name:
+        fr: "Soins capillaires"
+        en: "Hair care"
+      desc:
+        fr: "Hydratation, méthodes et résultats : tutoriels et avant/après."
+        en: "Hydration, methods and results: tutorials and before/after."
+      subs:
+        - id: cheveux-hydratation
+          fr: "Hydratation"
+          en: "Hydration"
+        - id: cheveux-masques-maison
+          fr: "Masques maison"
+          en: "Homemade masks"
+        - id: cheveux-routine-capillaire
+          fr: "Routine capillaire"
+          en: "Hair routine"
+    - id: mouvement
+      name:
+        fr: "Mouvement"
+        en: "Movement"
+      desc:
+        fr: "Danse, fitness, yoga et pilates : l'énergie et les progrès."
+        en: "Dance, fitness, yoga and pilates: energy and progress."
+      subs:
+        - id: mouvement-danse
+          fr: "Danse"
+          en: "Dance"
+        - id: mouvement-fitness
+          fr: "Fitness"
+          en: "Fitness"
+        - id: mouvement-yoga-pilates
+          fr: "Yoga & Pilates"
+          en: "Yoga & Pilates"
+    - id: rituels
+      name:
+        fr: "Rituels & Sérénité"
+        en: "Rituals & Serenity"
+      desc:
+        fr: "Gratitude, méditation, libation aux ancêtres : le calme avant tout."
+        en: "Gratitude, meditation, ancestral libation: calm above all."
+      subs:
+        - id: rituels-gratitude
+          fr: "Gratitude"
+          en: "Gratitude"
+        - id: rituels-meditation
+          fr: "Méditation"
+          en: "Meditation"
+    - id: style
+      name:
+        fr: "Style & Glow Up"
+        en: "Style & Glow Up"
+      desc:
+        fr: "Tenue du jour, allure et transformation en douceur."
+        en: "Outfit of the day, presence and gentle transformation."
+      subs: []
+- id: musique
+  file: musique.html
+  emoji: "🥁"
+  theme: theme-musique
+  prev: selfcare
+  next: cuisine
+  name:
+    fr: "Musique & Rythme"
+    en: "Music & Rhythm"
+  tip:
+    fr: "Ma voix, mon rythme"
+    en: "My voice, my rhythm"
+  tagline:
+    fr: "Laisser sortir la voix que je n'ai jamais pu laisser sortir."
+    en: "Letting out the voice I never could before."
+  intro:
+    fr: "Vocalises, karaoké, rythme et découvertes : ma voix telle qu'elle est aujourd'hui, pour mesurer la différence dans six mois."
+    en: "Vocal exercises, karaoke, rhythm and discoveries: my voice as it is today, to see the difference in six months."
+  rubriques:
+    - id: voix
+      name:
+        fr: "Voix & Chant"
+        en: "Voice & Singing"
+      desc:
+        fr: "Exercices du jour et progression de ma voix."
+        en: "Daily exercises and the progress of my voice."
+      subs:
+        - id: voix-vocalises
+          fr: "Vocalises"
+          en: "Vocal exercises"
+        - id: voix-karaoke
+          fr: "Karaoké"
+          en: "Karaoke"
+        - id: voix-ma-progression
+          fr: "Ma progression"
+          en: "My progress"
+    - id: rythme
+      name:
+        fr: "Danse & Rythme"
+        en: "Dance & Rhythm"
+      desc:
+        fr: "Bouger en musique : chorégraphies et énergie."
+        en: "Moving to music: choreography and energy."
+      subs:
+        - id: rythme-choregraphies
+          fr: "Chorégraphies"
+          en: "Choreographies"
+        - id: rythme-rythme-du-jour
+          fr: "Rythme du jour"
+          en: "Rhythm of the day"
+    - id: decouvertes
+      name:
+        fr: "Découvertes musicales"
+        en: "Musical discoveries"
+      desc:
+        fr: "Playlists, artistes et coups de cœur."
+        en: "Playlists, artists and favourites."
+      subs:
+        - id: decouvertes-playlists
+          fr: "Playlists"
+          en: "Playlists"
+        - id: decouvertes-artistes
+          fr: "Artistes"
+          en: "Artists"
+- id: cuisine
+  file: cuisine.html
+  emoji: "🥣"
+  theme: theme-cuisine
+  prev: musique
+  next: journal
+  name:
+    fr: "Cuisine & Pâtisserie"
+    en: "Cooking & Pastry"
+  tip:
+    fr: "Recettes et gourmandises"
+    en: "Recipes and treats"
+  tagline:
+    fr: "Cuisiner avec amour, un plat à la fois."
+    en: "Cooking with love, one dish at a time."
+  intro:
+    fr: "Pâtisserie, repas équilibrés et saveurs d'ici : mes recettes, mes essais et mes réussites (et mes ratés)."
+    en: "Pastry, balanced meals and local flavours: my recipes, experiments and successes (and flops)."
+  rubriques:
+    - id: patisserie
+      name:
+        fr: "Pâtisserie"
+        en: "Pastry"
+      desc:
+        fr: "Gâteaux, bouchées et bases à maîtriser pas à pas."
+        en: "Cakes, bites and basics to master step by step."
+      subs:
+        - id: patisserie-gateaux
+          fr: "Gâteaux"
+          en: "Cakes"
+        - id: patisserie-bouchees
+          fr: "Bouchées"
+          en: "Bites"
+        - id: patisserie-les-bases
+          fr: "Les bases"
+          en: "The basics"
+    - id: equilibre
+      name:
+        fr: "Repas équilibrés"
+        en: "Balanced meals"
+      desc:
+        fr: "Le plat du jour et mes repas pour prendre soin du corps."
+        en: "The dish of the day and meals to nourish my body."
+      subs:
+        - id: equilibre-plat-du-jour
+          fr: "Plat du jour"
+          en: "Dish of the day"
+        - id: equilibre-preparer-a-l-avance
+          fr: "Préparer à l'avance"
+          en: "Meal prep"
+    - id: saveurs
+      name:
+        fr: "Saveurs d'ici"
+        en: "Local flavours"
+      desc:
+        fr: "Les recettes de chez moi, revisitées avec amour."
+        en: "Recipes from home, revisited with love."
+      subs: []
+    - id: boissons
+      name:
+        fr: "Boissons & infusions"
+        en: "Drinks & infusions"
+      desc:
+        fr: "Jus, infusions et douceurs à partager."
+        en: "Juices, infusions and sweet things to share."
+      subs: []
+- id: journal
+  file: journal.html
+  emoji: "🪶"
+  theme: theme-journal
+  prev: cuisine
+  next: formation
+  name:
+    fr: "Journal & Réflexion"
+    en: "Journal & Reflection"
+  tip:
+    fr: "Écrire pour avancer"
+    en: "Writing to move forward"
+  tagline:
+    fr: "Écrire pour me comprendre, avancer et transmettre."
+    en: "Writing to understand myself, move forward and share."
+  intro:
+    fr: "Mon journal du soir, mes bilans de la semaine et mes réflexions sur la discipline, la confiance et le chemin."
+    en: "My evening journal, weekly reviews and reflections on discipline, confidence and the journey."
+  rubriques:
+    - id: soir
+      name:
+        fr: "Journal du soir"
+        en: "Evening journal"
+      desc:
+        fr: "Ma clôture quotidienne : j'ai exploré, j'ai appris, je deviens."
+        en: "My daily closing: I explored, I learned, I am becoming."
+      subs:
+        - id: soir-j-ai-explore
+          fr: "J'ai exploré"
+          en: "I explored"
+        - id: soir-j-ai-appris
+          fr: "J'ai appris"
+          en: "I learned"
+        - id: soir-je-deviens
+          fr: "Je deviens"
+          en: "I am becoming"
+    - id: ornibestweek
+      name:
+        fr: "#OrnibestWeek"
+        en: "#OrnibestWeek"
+      desc:
+        fr: "Mon bilan du dimanche, noté en pourcentage par zone de vie."
+        en: "My Sunday review, scored as a percentage for each area of life."
+      subs:
+        - id: ornibestweek-dernier-bilan
+          fr: "Dernier bilan"
+          en: "Latest review"
+        - id: ornibestweek-archives
+          fr: "Archives"
+          en: "Archives"
+    - id: reflexions
+      name:
+        fr: "Réflexions"
+        en: "Reflections"
+      desc:
+        fr: "Discipline, Best Version, confiance en soi : ce que j'observe en chemin."
+        en: "Discipline, Best Version, self-confidence: what I notice along the way."
+      subs:
+        - id: reflexions-discipline-best-version
+          fr: "Discipline & Best Version"
+          en: "Discipline & Best Version"
+        - id: reflexions-confiance-en-soi
+          fr: "Confiance en soi"
+          en: "Self-confidence"
+    - id: citations
+      name:
+        fr: "Citations & affirmations"
+        en: "Quotes & affirmations"
+      desc:
+        fr: "Les phrases qui me portent, dites à voix haute."
+        en: "The sentences that carry me, said out loud."
+      subs: []

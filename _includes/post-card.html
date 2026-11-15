@@ -1,0 +1,8 @@
+{% assign post = include.post %}{% assign pill = post.categorie | default: post.sous_rubrique %}
+<a class="post-card" href="{{ post.url | relative_url }}">
+    {% if post.image %}<span class="thumb"><img src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title | escape }}" loading="lazy" width="1200" height="675">{% if post.type == "video" %}<span class="play" aria-hidden="true">▶</span>{% endif %}</span>{% endif %}
+    <span class="card-top">{% if pill %}<span class="pill" data-en="{{ post.categorie_en | default: pill | escape }}">{{ pill | escape }}</span>{% endif %}{% if site.show_example_badge and post.exemple %}<span class="badge-example" data-en="Example">Exemple</span>{% endif %}</span>
+    <h3 data-en="{{ post.title_en | default: post.title | escape }}">{{ post.title | escape }}</h3>
+    <p data-en="{{ post.resume_en | default: post.resume | escape }}">{{ post.resume | escape }}</p>
+    <span class="card-foot">{% include post-date.html date=post.date %}<span class="more" data-en="Read →">Lire →</span></span>
+</a>

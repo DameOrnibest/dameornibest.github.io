@@ -1,0 +1,147 @@
+---
+layout: default
+title: "Dame Ornibest - une multipotentielle assumée"
+title_en: "Dame Ornibest - an unapologetic multipotentialite"
+description: "Dame Ornibest, multipotentielle en devenir : parcours, apprentissages, créations et rituels."
+nav: ornivers
+body_class: page-home
+home: true
+permalink: /
+---
+
+    <main class="main-content" id="main">
+
+        <!-- 1. ACCROCHE -->
+        <section class="hero" aria-labelledby="hero-title">
+            <p class="eyebrow" data-en="Welcome to the Ornivers">Bienvenue dans l'Ornivers</p>
+            <h1 id="hero-title" data-en="It is never too late to reinvent yourself.">Il n'est jamais trop tard pour se réinventer.</h1>
+            <p data-en="I am Dame Ornibest, a multipotentialite in the making. This site is for you if you have a thousand passions: you will find my journey, my learning and my creations.">Je suis Dame Ornibest, multipotentielle en devenir. Ce site est pour toi qui as mille envies : tu y trouveras mon parcours, mes apprentissages et mes créations.</p>
+            <a class="hero-link" href="#ornivers"><span data-en="Explore the Ornivers ↓">Explorer l'Ornivers ↓</span></a>
+        </section>
+
+        <!-- GALAXIE : l'Ornivers -->
+        <section class="galaxy" id="ornivers" aria-labelledby="ornivers-title">
+            <div class="section-head">
+                <h2 class="section-title" id="ornivers-title" data-en="My Ornivers">Mon Ornivers</h2>
+                <p class="section-sub" data-en="Six planets, one sensitivity. Click a planet to explore it.">Six planètes, une seule sensibilité. Clique sur une planète pour l'explorer.</p>
+            </div>
+
+            <div class="solar-system">
+                <div class="sun-center">
+                    <span class="sun-emoji" aria-hidden="true">🌟</span>
+                    <span class="sun-label">ORNIVERS</span>
+                </div>
+                
+            <div class="orbit orbit-1">
+                <div class="planet-anchor">
+                    <a class="planet theme-formation" href="{{ '/formation.html' | relative_url }}">
+                        <span class="planet-emoji" aria-hidden="true">📚</span>
+                        <span class="planet-label" data-en="Learning &amp; Knowledge">Formation &amp; Savoir</span>
+                    </a>
+                </div>
+            </div>
+            <div class="orbit orbit-2">
+                <div class="planet-anchor">
+                    <a class="planet theme-art" href="{{ '/art.html' | relative_url }}">
+                        <span class="planet-emoji" aria-hidden="true">✨</span>
+                        <span class="planet-label" data-en="Art &amp; Creation">Art &amp; Création</span>
+                    </a>
+                </div>
+            </div>
+            <div class="orbit orbit-3">
+                <div class="planet-anchor">
+                    <a class="planet theme-selfcare" href="{{ '/bien-etre.html' | relative_url }}">
+                        <span class="planet-emoji" aria-hidden="true">🌿</span>
+                        <span class="planet-label" data-en="Self-care &amp; Well-being">Self-care &amp; Bien-être</span>
+                    </a>
+                </div>
+            </div>
+            <div class="orbit orbit-4">
+                <div class="planet-anchor">
+                    <a class="planet theme-musique" href="{{ '/musique.html' | relative_url }}">
+                        <span class="planet-emoji" aria-hidden="true">🥁</span>
+                        <span class="planet-label" data-en="Music &amp; Rhythm">Musique &amp; Rythme</span>
+                    </a>
+                </div>
+            </div>
+            <div class="orbit orbit-5">
+                <div class="planet-anchor">
+                    <a class="planet theme-cuisine" href="{{ '/cuisine.html' | relative_url }}">
+                        <span class="planet-emoji" aria-hidden="true">🥣</span>
+                        <span class="planet-label" data-en="Cooking &amp; Pastry">Cuisine &amp; Pâtisserie</span>
+                    </a>
+                </div>
+            </div>
+            <div class="orbit orbit-6">
+                <div class="planet-anchor">
+                    <a class="planet theme-journal" href="{{ '/journal.html' | relative_url }}">
+                        <span class="planet-emoji" aria-hidden="true">🪶</span>
+                        <span class="planet-label" data-en="Journal &amp; Reflection">Journal &amp; Réflexion</span>
+                    </a>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- EN CE MOMENT (données : _data/explore.yml) -->
+        {% assign ex = site.data.explore %}
+        <section class="current-exploration" aria-labelledby="now-title">
+            <h2 id="now-title" data-en="🚀 Right now, I&#x27;m exploring...">🚀 En ce moment, j'explore...</h2>
+            <h3 data-en="{{ ex.title.en | escape }}">{{ ex.title.fr | escape }}</h3>
+            <div class="progress-bar" role="progressbar" aria-label="Niveau d&#x27;exploration" data-en-aria-label="Exploration level" aria-valuemin="0" aria-valuemax="{{ ex.max }}" aria-valuenow="{{ ex.level }}">
+                <div class="progress-fill" style="--progress: {{ ex.level | times: 100 | divided_by: ex.max }}%;"><span data-en="Level {{ ex.level }}/{{ ex.max }}">Niveau {{ ex.level }}/{{ ex.max }}</span></div>
+            </div>
+            <div class="streak">🔥 <span data-en="{{ ex.streak }} days of practice in a row">{{ ex.streak }} jours consécutifs de pratique</span></div>
+        </section>
+
+        <!-- 2. MON HISTOIRE EN BREF -->
+        <section class="section card story" aria-labelledby="story-title">
+            <div class="story-orb" aria-hidden="true">🪐</div>
+            <div>
+                <h2 id="story-title" data-en="Who is Dame Ornibest?">Qui est Dame Ornibest ?</h2>
+                <p data-en="I am a multipotentialite in the making. One evening, I described in detail the woman I want to become, and decided to make her my mentor. Every evening, she gives me tomorrow&#x27;s assignments; every day, I hand in my work. Here, I document the whole journey: my learning, my creations, my care routines and my flops, with a smile. Because it is never too late to reinvent yourself.">Je suis une multipotentielle en devenir. Un soir, j'ai décrit en détail la femme que je veux devenir, et j'ai décidé d'en faire ma mentore. Chaque soir, elle me donne mes devoirs du lendemain ; chaque jour, je lui rends ma copie. Ici, je documente tout le chemin : mes apprentissages, mes créations, mes soins et mes ratés, avec le sourire. Parce qu'il n'est jamais trop tard pour se réinventer.</p>
+                <a class="btn btn-ghost" href="{{ '/a-propos.html#histoire' | relative_url }}"><span data-en="Read my story">Lire mon histoire</span></a>
+                <a class="btn btn-ghost" href="{{ '/publications/article-socle-dame-ornibest/' | relative_url }}"><span data-en="Read the foundation article">Lire l'article socle</span></a>
+            </div>
+        </section>
+
+        <!-- 3. LES DERNIÈRES PUBLICATIONS (automatique : les 3 plus récentes) -->
+        <section class="section" aria-labelledby="latest-title">
+            <h2 class="section-title" id="latest-title" data-en="The latest posts">Les dernières publications</h2>
+            <div class="post-grid">
+{% for post in site.posts limit: 3 %}{% include post-card.html post=post %}{% endfor %}
+            </div>
+            <p class="section-more"><a class="btn btn-ghost" href="{{ '/publications/' | relative_url }}"><span data-en="See all posts">Voir toutes les publications</span></a></p>
+        </section>
+
+        <!-- 4. #ORNIBESTWEEK (données : _data/ornibestweek.yml) -->
+        <section class="section card" id="ornibestweek" aria-labelledby="week-title">
+            <div class="week-head">
+                <h2 id="week-title">#OrnibestWeek</h2>
+                <span class="week-note" data-en="{{ site.data.ornibestweek.note.en | escape }}">{{ site.data.ornibestweek.note.fr | escape }}</span>
+            </div>
+            <p class="week-note" data-en="Every Sunday, I review my week and score each area of my life as a percentage. It is my appointment with my Best Version.">Chaque dimanche, je fais le bilan de ma semaine et je note chaque zone de ma vie en pourcentage. C'est mon rendez-vous avec ma Best Version.</p>
+            <ul class="week-list">
+{% for z in site.data.ornibestweek.zones %}
+                <li class="week-row">
+                    <span class="week-label" data-en="{{ z.en | escape }}">{{ z.fr | escape }}</span>
+                    <div class="bar" aria-hidden="true"><i style="--v: {{ z.value }}%"></i></div>
+                    <span class="week-pct">{{ z.value }}%</span>
+                </li>
+{% endfor %}
+            </ul>
+            <a class="btn btn-ghost" href="{{ '/journal.html#ornibestweek' | relative_url }}"><span data-en="See my reviews">Voir mes bilans</span></a>
+        </section>
+
+        <!-- 5. REJOINDRE LA COMMUNAUTÉ -->
+        <section class="section join" aria-labelledby="join-title">
+            <h2 id="join-title" data-en="Join the community">Rejoindre la communauté</h2>
+            <p data-en="Every week, I share my learning, my creations and my #OrnibestWeek. Come move forward with me, at your own pace.">Chaque semaine, je partage mes apprentissages, mes créations et mon #OrnibestWeek. Viens avancer avec moi, à ton rythme.</p>
+            <a class="btn btn-primary" href="{{ '/newsletter.html' | relative_url }}"><span data-en="Join the newsletter">Rejoindre la newsletter</span></a>
+            <div class="follow">
+                <span data-en="Or follow me on social media">Ou suis-moi sur les réseaux</span>
+                <div class="social"><a href="{{ site.social.youtube | default: '#' }}" aria-label="YouTube" title="YouTube" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="5" width="19" height="14" rx="4"/><path d="M10 9.2v5.6l5-2.8z" fill="currentColor"/></svg></a><a href="{{ site.social.tiktok | default: '#' }}" aria-label="TikTok" title="TikTok" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 3v11.2a3.8 3.8 0 1 1-3.8-3.8"/><path d="M14 3c.4 2.6 2.2 4.4 5 4.6"/></svg></a><a href="{{ site.social.pinterest | default: '#' }}" aria-label="Pinterest" title="Pinterest" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M11 17.5l1.6-6.6"/><path d="M9.2 12.6c-.8-2.4.7-4.8 3.3-4.8 2 0 3.3 1.3 3.3 3 0 2-1.2 3.6-2.8 3.6-.8 0-1.4-.5-1.6-1.2"/></svg></a><a href="{{ site.social.instagram | default: '#' }}" aria-label="Instagram" title="Instagram" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".9" fill="currentColor"/></svg></a></div>
+            </div>
+        </section>
+
+    </main>

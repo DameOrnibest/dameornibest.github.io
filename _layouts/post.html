@@ -1,0 +1,61 @@
+---
+layout: default
+---
+{% assign p = site.data.planets | where: "id", page.planet | first %}
+    <nav class="crumbs" aria-label="Fil d'Ariane" data-en-aria-label="Breadcrumb">
+        <a href="{{ '/#ornivers' | relative_url }}"><span data-en="My Ornivers">Mon Ornivers</span></a> <span aria-hidden="true">›</span>
+        <a href="{{ p.file | prepend: '/' | relative_url }}"><span data-en="{{ p.name.en | escape }}">{{ p.name.fr | escape }}</span></a>
+{% for r in p.rubriques %}{% if r.id == page.rubrique %} <span aria-hidden="true">›</span> <a href="{{ p.file | prepend: '/' | append: '#' | append: r.id | relative_url }}"><span data-en="{{ r.name.en | escape }}">{{ r.name.fr | escape }}</span></a>{% endif %}{% endfor %}
+    </nav>
+
+    <main class="post-page" id="main">
+        <article>
+            <header class="post-head">
+                <p class="card-top">{% assign pill = page.categorie | default: page.sous_rubrique %}{% if pill %}<span class="pill" data-en="{{ page.categorie_en | default: pill | escape }}">{{ pill | escape }}</span>{% endif %}{% if site.show_example_badge and page.exemple %}<span class="badge-example" data-en="Example">Exemple</span>{% endif %}</p>
+                <h1 data-en="{{ page.title_en | default: page.title | escape }}">{{ page.title | escape }}</h1>
+                <p class="post-meta">{% include post-date.html date=page.date %}</p>
+            </header>
+
+{% if page.video_url %}
+{% assign vu = page.video_url %}
+{% if vu contains "youtube.com/watch?v=" %}{% assign vid = vu | split: "v=" | last | split: "&" | first %}{% elsif vu contains "youtu.be/" %}{% assign vid = vu | split: "youtu.be/" | last | split: "?" | first %}{% endif %}
+{% if vid %}
+            <div class="video-wrap"><iframe src="https://www.youtube-nocookie.com/embed/{{ vid }}" title="{{ page.title | escape }}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe></div>
+{% endif %}
+            <p class="video-link"><a class="btn btn-ghost" href="{{ vu }}" target="_blank" rel="noopener"><span data-en="▶ Watch the video">▶ Voir la vidéo</span></a></p>
+{% elsif page.image %}
+            <figure class="post-figure">
+                <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}" width="1200" height="675">
+{% if page.image_credit %}                <figcaption>{{ page.image_credit | escape }}</figcaption>{% endif %}
+            </figure>
+{% endif %}
+
+            <div class="post-body{% if page.body_en %} has-en{% endif %}">
+                <div data-lang-fr>
+{{ content }}
+                </div>
+{% if page.body_en %}
+                <div data-lang-en>
+{{ page.body_en | markdownify }}
+                </div>
+{% endif %}
+            </div>
+
+{% if page.tags %}
+            <ul class="post-tags" aria-label="Mots-clés">{% for t in page.tags %}<li>#{{ t | escape }}</li>{% endfor %}</ul>
+{% endif %}
+
+            <p class="post-actions">
+                <a class="btn btn-ghost" href="{{ p.file | prepend: '/' | relative_url }}"><span data-en="← Back to the planet">← Retour à la planète</span></a>
+                <a class="btn btn-ghost" href="{{ '/publications/' | relative_url }}"><span data-en="All posts">Toutes les publications</span></a>
+            </p>
+        </article>
+
+{% assign same = site.posts | where: "planet", page.planet %}
+        <section class="post-more" aria-labelledby="more-title">
+            <h2 id="more-title" class="section-title" data-en="More from this planet">Encore sur cette planète</h2>
+            <div class="post-grid">
+{% for post in same limit: 4 %}{% if post.url != page.url %}{% include post-card.html post=post %}{% endif %}{% endfor %}
+            </div>
+        </section>
+    </main>
