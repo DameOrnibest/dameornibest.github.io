@@ -11,7 +11,7 @@ timezone: Africa/Douala
 # ── Adresse du site ──
 # Site « utilisateur » (dame-ornibest.github.io, dépôt du même nom) : laisse url et baseurl vides.
 # Site « projet » (dame-ornibest.github.io/mon-depot) : mets baseurl: "/mon-depot"
-url: ""
+url: "https://dameornibest.github.io"
 baseurl: ""
 
 # Les publications datées d'un jour futur restent cachées jusqu'à ce jour-là.
